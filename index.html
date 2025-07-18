@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Ti, con amor 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Para Ti, con cariñño 💖</h1>
+
+  <div class="frase">
+    <p>NAYELI</p>
+  </div>
+
+  <button class="boton-modal" onclick="abrirModal('modal1')">Frases de amor</button>
+  <button class="boton-modal" onclick="abrirModal('modal2')">Frases divertidas</button>
+  <button class="boton-modal" onclick="abrirModal('modal3')">Frases para el alma</button>
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+      <h2 style="color: white;">Frases de amor 💕</h2>
+      <p>1. "Si el amor fuera una canción, tú serías mi melodía favorita."</p>
+      <p>2. "Eres la razón por la que sonrío sin motivo."</p>
+      <p>3. "En tu sonrisa encuentro mi lugar en el mundo."</p>
+      <p>4. "Tus besos saben a cielo."</p>
+      <p>5. "Eres la chispa que ilumina mis días."</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+      <h2 style="color: white;">Frases divertidas 😄</h2>
+      <p>1. "Me gustas tanto que hasta me pongo nervioso al escribirte."</p>
+      <p>2. "Si te doy un beso, ¿me prestas otro?"</p>
+      <p>3. "Si el amor fuera pecado, yo ya estaría condenado por siempre."</p>
+      <p>4. "Eres tan linda que hasta el sol te pide consejos de brillo."</p>
+      <p>5. "Eres mi sueño hecho realidad."</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal3" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal('modal3')">&times;</span>
+      <h2 style="color: white;">Frases para el alma 🌸</h2>
+      <p>1. "Eres luz en mi camino, guía en mi vida y paz en mi corazón."</p>
+      <p>2. "Contigo aprendí que el amor no se busca, se encuentra."</p>
+      <p>3. "Eres mi tranquilidad en medio del caos."</p>
+      <p>4. "Tener tu cariño es tener un pedazo de cielo."</p>
+      <p>5. "En tu mirada veo lo que quiero para siempre."</p>
+    </div>
+  </div>
+
+  <!-- Galería de imágenes -->
+  <div class="galeria">
+    <img src="https://i.pinimg.com/736x/a2/ac/59/a2ac59f8a775b8639946091bb8765de9.jpg" alt="Imagen romántica 1">
+    <img src=" https://i.pinimg.com/1200x/5d/e0/40/5de040f0438abca5ae94033f9e0e5f94.jpg" alt="Imagen romántica 2">
+    <img src=" https://i.pinimg.com/736x/63/2d/e0/632de0a12e62c4f110156d9418904214.jpg" alt="Imagen romántica 3">
+    <img src=" https://i.pinimg.com/736x/aa/22/07/aa2207d05a0ae5685b857de2cf7e5dc1.jpg" alt="Imagen romántica 4">
+  </div>
+
+  <script>
+    function abrirModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function cerrarModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // Cerrar modal al hacer clic fuera
+    window.onclick = function(event) {
+      const modales = document.getElementsByClassName('modal');
+      for (let modal of modales) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
